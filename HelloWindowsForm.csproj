@@ -33,10 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bmob-Windows">
-      <HintPath>..\..\bmob_csharp_sdk_1.2.2\bmob_csharp_sdk_1.2.2\Windows\Bmob-Windows.dll</HintPath>
+      <HintPath>lib\Bmob-Windows.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\bmob_csharp_sdk_1.2.2\bmob_csharp_sdk_1.2.2\Windows\Newtonsoft.Json.dll</HintPath>
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
