@@ -1,4 +1,4 @@
-﻿namespace HelloWindowsForm
+﻿namespace cn.bmob.example
 {
     partial class BmobForm
     {
@@ -157,6 +157,9 @@
             this.Controls.Add(this.updateData);
             this.Controls.Add(this.createData);
             this.Controls.Add(this.FormStatus);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "BmobForm";
             this.Text = "Bmob后端云服务平台（www.bmob.cn）";
             this.FormStatus.ResumeLayout(false);

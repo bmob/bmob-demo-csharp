@@ -1,39 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using cn.bmob.api;
 using HelloWindowsForm.Model;
 using cn.bmob.io;
 using cn.bmob.tools;
 using System.Diagnostics;
 using cn.bmob.json;
+using cn.bmob.example;
 
-namespace HelloWindowsForm
+namespace cn.bmob.example
 {
-    public partial class BmobForm : Form
+    public partial class BmobForm : BmobBaseForm
     {
-        //创建Bmob实例
-        private BmobWindows Bmob =new BmobWindows();
         //对应要操作的数据表
         public const String TABLE_NAME = "Game";
         //接下来要操作的数据的数据
         private GameObject gameObject = new GameObject(TABLE_NAME);
 
-
         public BmobForm()
+            : base()
         {
             InitializeComponent();
-            //初始化ApplicationId，这个ApplicationId需要更改为你自己的ApplicationId（ http://www.bmob.cn 上注册登录之后，创建应用可获取到ApplicationId）
-            Bmob.initialize("69015a79796397f7701454336b84e0c4");
-
-            //注册调试工具
-            BmobDebug.Register(msg => { Debug.WriteLine(msg); });
         }
 
         private void createData_Click(object sender, EventArgs e)
@@ -47,6 +33,7 @@ namespace HelloWindowsForm
             //保存数据
             var future = Bmob.CreateTaskAsync(gameObject);
 
+            // ！！！ 直接获取异步对象结果会阻塞主线程！ 建议使用async + await/callback的形式， 可以参考文件上传功能的实现。
             //获取创建记录的objectId
             gameObject.objectId = future.Result.objectId;
 
@@ -69,7 +56,7 @@ namespace HelloWindowsForm
             FormStatusLabel.Text = "查找全部数据成功";
         }
 
-        
+
         private void findOneData_Click(object sender, EventArgs e)
         {
             //查找一条记录

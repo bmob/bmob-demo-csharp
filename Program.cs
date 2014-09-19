@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HelloWindowsForm
+namespace cn.bmob.example
 {
     static class Program
     {
@@ -16,7 +16,10 @@ namespace HelloWindowsForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BmobForm());
+            Application.Run(
+                new BmobForm()
+                //new BmobFileUploadForm()
+                );
         }
     }
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{BA2E5B3E-A2A6-482F-834E-0D7C370B7AD3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>baseAction4CSarp</RootNamespace>
-    <AssemblyName>baseAction4CSarp</AssemblyName>
+    <RootNamespace>cn.bmob.example</RootNamespace>
+    <AssemblyName>bmob-demo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,17 +50,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BmobBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BmobBaseForm.Designer.cs">
+      <DependentUpon>BmobBaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BmobForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BmobForm.Designer.cs">
       <DependentUpon>BmobForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BmobFileUploadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BmobFileUploadForm.Designer.cs">
+      <DependentUpon>BmobFileUploadForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\GameObject.cs" />
+    <Compile Include="Model\MyfilesObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BmobForm.resx">
       <DependentUpon>BmobForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BmobFileUploadForm.resx">
+      <DependentUpon>BmobFileUploadForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
