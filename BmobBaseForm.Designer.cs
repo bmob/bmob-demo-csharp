@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // BmobBaseForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "BmobBaseForm";
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "BmobBaseForm";
+            this.Text = "Bmob后端云服务平台（www.bmob.cn）";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

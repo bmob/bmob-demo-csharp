@@ -71,7 +71,6 @@ namespace cn.bmob.example
                         formstatus.Text = "保存成功！";
                     }
                     ));
-
             });
 
         }

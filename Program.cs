@@ -17,8 +17,9 @@ namespace cn.bmob.example
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(
-                new BmobForm()
+                new BmobDataForm()
                 //new BmobFileUploadForm()
+                //new BmobCloudCode()
                 );
         }
     }

@@ -56,11 +56,17 @@
     <Compile Include="BmobBaseForm.Designer.cs">
       <DependentUpon>BmobBaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BmobForm.cs">
+    <Compile Include="BmobCloudCode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BmobForm.Designer.cs">
-      <DependentUpon>BmobForm.cs</DependentUpon>
+    <Compile Include="BmobCloudCode.Designer.cs">
+      <DependentUpon>BmobCloudCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BmobDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BmobDataForm.Designer.cs">
+      <DependentUpon>BmobDataForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BmobFileUploadForm.cs">
       <SubType>Form</SubType>
@@ -72,8 +78,14 @@
     <Compile Include="Model\MyfilesObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BmobForm.resx">
-      <DependentUpon>BmobForm.cs</DependentUpon>
+    <EmbeddedResource Include="BmobBaseForm.resx">
+      <DependentUpon>BmobBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BmobCloudCode.resx">
+      <DependentUpon>BmobCloudCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BmobDataForm.resx">
+      <DependentUpon>BmobDataForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BmobFileUploadForm.resx">
       <DependentUpon>BmobFileUploadForm.cs</DependentUpon>
@@ -100,6 +112,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cloudcode.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
