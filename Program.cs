@@ -20,7 +20,8 @@ namespace cn.bmob.example
                 new BmobDataForm()
                 //new BmobFileUploadForm()
                 //new BmobCloudCode()
-                );
+                //new BmobUserForm()
+            );
         }
     }
 }
