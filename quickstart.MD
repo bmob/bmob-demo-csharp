@@ -5,17 +5,17 @@
 
 登录账号进入bmob后台后，点击后台界面左上角“创建应用”，在弹出框输入你应用的名称，然后确认，你就拥有了一个等待开发的应用。
 
-![](image/rumen_chuangjian.png)
+![](images/rumen_chuangjian.png)
 
 ## 获取应用密钥
 
 选择你要开发的应用，点击该应用下方对应的“应用密钥”
 
-![](image/rumen_miyue_1.png)
+![](images/rumen_miyue_1.png)
 
 在跳转页面，获取`Application ID`，此ID将会在初始化SDK中使用到。
 
-![](image/rumen_miyue_2.png)
+![](images/rumen_miyue_2.png)
 
 ## 下载安装SDK
 
