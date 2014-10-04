@@ -4,4 +4,4 @@ release
 obj
 
 *.cache
-/target
+target
