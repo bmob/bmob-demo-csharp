@@ -50,7 +50,9 @@ namespace cn.bmob.example
         private void findAllData_Click(object sender, EventArgs e)
         {
             //查找表中的全部数据（默认最多返回10条数据）
-            var future = Bmob.FindTaskAsync<GameObject>(TABLE_NAME, new BmobQuery());
+            var query = new BmobQuery();
+            query.WhereContainedIn<string>("playerName", "123");
+            var future = Bmob.FindTaskAsync<GameObject>(TABLE_NAME, query);
             FinishedCallback(future.Result, resultText);
 
             FormStatusLabel.Text = "查找全部数据成功";
