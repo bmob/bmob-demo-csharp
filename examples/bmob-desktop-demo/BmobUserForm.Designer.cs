@@ -38,6 +38,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.result = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.gotinfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             this.loginBtn.Location = new System.Drawing.Point(12, 203);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(269, 28);
+            this.loginBtn.Size = new System.Drawing.Size(123, 28);
             this.loginBtn.TabIndex = 21;
             this.loginBtn.Text = "登     录";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -120,6 +121,16 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "返回结果：";
             // 
+            // gotinfo
+            // 
+            this.gotinfo.Location = new System.Drawing.Point(158, 203);
+            this.gotinfo.Name = "gotinfo";
+            this.gotinfo.Size = new System.Drawing.Size(123, 28);
+            this.gotinfo.TabIndex = 21;
+            this.gotinfo.Text = "获取已登录用户信息";
+            this.gotinfo.UseVisualStyleBackColor = true;
+            this.gotinfo.Click += new System.EventHandler(this.gotinfo_Click);
+            // 
             // BmobUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -133,6 +144,7 @@
             this.Controls.Add(this.username);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.gotinfo);
             this.Controls.Add(this.loginBtn);
             this.MaximizeBox = false;
             this.Name = "BmobUserForm";
@@ -155,5 +167,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox result;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button gotinfo;
     }
 }

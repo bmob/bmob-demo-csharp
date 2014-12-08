@@ -1,6 +1,7 @@
 ﻿using BmobCSharpFileDemo.Model;
 using cn.bmob.exception;
 using cn.bmob.io;
+using cn.bmob.json;
 using cn.bmob.tools;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,12 @@ namespace cn.bmob.example
                 MessageBox.Show("注册失败，原因：" + future.Exception.InnerException.ToString());
             }
             
+        }
+
+        private void gotinfo_Click(object sender, EventArgs e)
+        {
+            FinishedCallback(BmobUser.CurrentUser, result);
+            Console.WriteLine(JsonAdapter.JSON.ToString(BmobUser.CurrentUser));
         }
     }
 }

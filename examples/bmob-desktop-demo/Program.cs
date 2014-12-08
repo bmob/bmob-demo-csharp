@@ -17,10 +17,10 @@ namespace cn.bmob.example
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(
-                new BmobDataForm()
+                //new BmobDataForm()
                 //new BmobFileUploadForm()
                 //new BmobCloudCode()
-                //new BmobUserForm()
+                new BmobUserForm()
             );
         }
     }
