@@ -18,9 +18,9 @@ namespace cn.bmob.example
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(
                 //new BmobDataForm()
-                //new BmobFileUploadForm()
+                new BmobFileUploadForm()
                 //new BmobCloudCode()
-                new BmobUserForm()
+                //new BmobUserForm()
             );
         }
     }
