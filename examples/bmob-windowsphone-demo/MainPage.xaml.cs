@@ -30,13 +30,12 @@ namespace HelloPhone
         public MainPage()
         {
             InitializeComponent();
+            
+            Bmob.initialize("4414150cb439afdf684d37dc184e0f9f", "e1deb317442129c125b228ddf78e5f22");
 
-            // onroad
-            Bmob.initialize(//"71cbfc2602aa830a117f7b15f20cc3ec");
-               "4414150cb439afdf684d37dc184e0f9f");
             BmobDebug.Register(msg => { Debug.WriteLine(msg); });
 
-            BmobConfiguration.PushChannel = "your_app_name_en";
+            BmobWindowsPhone.PushChannel = "your_app_name_en";
 
             // 用于本地化 ApplicationBar 的示例代码
             //BuildLocalizedApplicationBar();
@@ -79,7 +78,7 @@ namespace HelloPhone
                 {
                     status = "ERROR";
                 }
-                BmobDebug.Log(JsonAdapter.JSON.ToJson(resp));
+                BmobDebug.Log(JsonAdapter.JSON.ToDebugJsonString(resp));
 
                 Dispatcher.BeginInvoke(() =>
                 {
@@ -150,13 +149,13 @@ namespace HelloPhone
         {
             var data = new BmobApi();
             data.name = "winse";
-            BmobDebug.Log(JsonAdapter.JSON.ToJson(data));
+            BmobDebug.Log(JsonAdapter.JSON.ToDebugJsonString(data));
         }
 
         // 调用内部方法请求url网页的内容
         private void url_Click(object sender, RoutedEventArgs e)
         {
-            new BmobWindows().Request("http://www.baidu.com", "", new byte[0], new Dictionary<string, string>(), (resp, ex) =>
+            new BmobWindows().Request("http://www.baidu.com", "GET", "", new byte[0], new Dictionary<string, string>(), (resp, status, ex) =>
             {
                 BmobDebug.Log(resp);
             });
@@ -165,19 +164,8 @@ namespace HelloPhone
         // 请求b获取mob服务器时间
         private void time_Click(object sender, RoutedEventArgs e)
         {
-            Bmob.Timestamp((resp, ex) =>
-            {
-                string status = "OK";
-                if (ex != null)
-                {
-                    status = "ERROR";
-                }
-
-                Dispatcher.BeginInvoke(() =>
-                {
-                    updateStatus(time, status);
-                });
-            });
+            // Restful没有对应的接口
+            updateStatus(time, "ERROR");
         }
 
 

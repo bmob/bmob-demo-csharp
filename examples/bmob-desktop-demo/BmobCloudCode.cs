@@ -86,7 +86,7 @@ function onRequest(request, response, modules) {
   db.findOne({
 
     "table":"_User",
-   "objectId":request.body.userid
+    "objectId":request.body.userid
   
   },function(err,data){
    

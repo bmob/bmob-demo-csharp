@@ -61,7 +61,7 @@ namespace cn.bmob.example
         private void gotinfo_Click(object sender, EventArgs e)
         {
             FinishedCallback(BmobUser.CurrentUser, result);
-            Console.WriteLine(JsonAdapter.JSON.ToString(BmobUser.CurrentUser));
+            Console.WriteLine(JsonAdapter.JSON.ToDebugJsonString(BmobUser.CurrentUser));
         }
     }
 }

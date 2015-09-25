@@ -19,8 +19,8 @@ namespace cn.bmob.example
             bmob = new BmobWindows();
 
             //初始化ApplicationId，这个ApplicationId需要更改为你自己的ApplicationId（ http://www.bmob.cn 上注册登录之后，创建应用可获取到ApplicationId）
-            Bmob.initialize("69015a79796397f7701454336b84e0c4");
-
+            Bmob.initialize("4414150cb439afdf684d37dc184e0f9f", "e1deb317442129c125b228ddf78e5f22");
+            
             //注册调试工具
             BmobDebug.Register(msg => { Debug.WriteLine(msg); });
         }
@@ -33,14 +33,7 @@ namespace cn.bmob.example
         //对返回结果进行显示处理
         public void FinishedCallback<T>(T data, TextBox text)
         {
-            if (data is IBmobWritable)
-            {
-                text.Text = JsonAdapter.JSON.ToJson((IBmobWritable)data);
-            }
-            else
-            {
-                text.Text = JsonAdapter.JSON.ToString(data);
-            }
+            text.Text = JsonAdapter.JSON.ToDebugJsonString(data);
         }
 
     }
