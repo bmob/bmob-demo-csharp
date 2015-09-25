@@ -110,7 +110,7 @@ public class HelloBmob : MonoBehaviour
 		{
 				BmobGameObject game = new BmobGameObject ();
 				game.playerName = "pn_123";
-		Bmob.Update (TABLENAME, "f2634bad1d", game, (resp, exception) =>
+		Bmob.Update (TABLENAME, "17f44f63dc", game, (resp, exception) =>
 				{
 						if (exception != null) {
 								print ("保存失败, 失败原因为： " + exception.Message);
@@ -123,7 +123,7 @@ public class HelloBmob : MonoBehaviour
 
 		void DeleteGame ()
 		{
-		Bmob.Delete (TABLENAME, "f2634bad1d", (resp, exception) =>
+		Bmob.Delete (TABLENAME, "17f44f63dc", (resp, exception) =>
 				{
 						if (exception != null) {
 								print ("删除失败, 失败原因为： " + exception.Message);
@@ -136,7 +136,7 @@ public class HelloBmob : MonoBehaviour
 
 		void GetGame ()
 		{
-		Bmob.Get<BmobGameObject> (TABLENAME, "f2634bad1d", (resp, exception) =>
+		Bmob.Get<BmobGameObject> (TABLENAME, "17f44f63dc", (resp, exception) =>
 				{
 						if (exception != null) {
 								print ("查询失败, 失败原因为： " + exception.Message);
