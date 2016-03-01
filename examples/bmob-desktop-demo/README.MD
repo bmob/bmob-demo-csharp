@@ -3,13 +3,13 @@
 
 【注】所有Demo采用VS Express 2012 for Windows Destop版本开发，开发工具下载地址为：http://www.microsoft.com/zh-CN/download/details.aspx?id=34673
 
-![](images/data.jpg)
+![](../../images/data.jpg)
 
-![](images/user.jpg)
+![](../../images/user.jpg)
 
-![](images/upload.jpg)
+![](../../images/upload.jpg)
 
-![](images/cloudcode.jpg)
+![](../../images/cloudcode.jpg)
 
 # Bmob官方信息
 
