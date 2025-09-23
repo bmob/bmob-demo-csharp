@@ -161,7 +161,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BmobForm";
-            this.Text = "Bmob后端云服务平台（www.bmob.cn）";
+            this.Text = "Bmob后端云服务平台（www.bmobapp.com）";
             this.FormStatus.ResumeLayout(false);
             this.FormStatus.PerformLayout();
             this.ResumeLayout(false);

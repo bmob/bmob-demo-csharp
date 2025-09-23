@@ -18,8 +18,8 @@ namespace cn.bmob.example
         {
             bmob = new BmobWindows();
 
-            //初始化ApplicationId，这个ApplicationId需要更改为你自己的ApplicationId（ http://www.bmob.cn 上注册登录之后，创建应用可获取到ApplicationId）
-            Bmob.initialize("4414150cb439afdf684d37dc184e0f9f", "e1deb317442129c125b228ddf78e5f22");
+            //初始化ApplicationId，这个ApplicationId需要更改为你自己的ApplicationId（ http://www.bmobapp.com 上注册登录之后，创建应用可获取到ApplicationId）
+            Bmob.initialize("66c17717bbe9d423df02da5d199de77e", "82b7aece49ad172d8c141f5321d20b30");
             
             //注册调试工具
             BmobDebug.Register(msg => { Debug.WriteLine(msg); });

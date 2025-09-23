@@ -149,7 +149,7 @@
             this.MaximizeBox = false;
             this.Name = "BmobUserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bmob后端云服务平台（www.bmob.cn）";
+            this.Text = "Bmob后端云服务平台（www.bmobapp.com）";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

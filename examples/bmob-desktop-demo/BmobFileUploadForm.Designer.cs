@@ -158,7 +158,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BmobFileUploadForm";
-            this.Text = "Bmob后端云服务平台（www.bmob.cn）";
+            this.Text = "Bmob后端云服务平台（www.bmobapp.com）";
+            this.Load += new System.EventHandler(this.BmobFileUploadForm_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);

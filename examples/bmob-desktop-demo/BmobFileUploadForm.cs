@@ -1,20 +1,22 @@
-﻿using System;
+﻿using BmobCSharpFileDemo.Model;
+using cn.bmob.api;
+using cn.bmob.example.Model;
+using cn.bmob.exception;
+using cn.bmob.Extensions;
+using cn.bmob.io;
+using cn.bmob.json;
+using cn.bmob.tools;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using cn.bmob.api;
-using cn.bmob.io;
-using cn.bmob.json;
-using cn.bmob.tools;
-using System.Diagnostics;
-using System.IO;
-using cn.bmob.exception;
-using BmobCSharpFileDemo.Model;
 
 namespace cn.bmob.example
 {
@@ -44,7 +46,13 @@ namespace cn.bmob.example
         {
             formstatus.Text = "正在上传...";
 
-            var Result = await Bmob.FileUploadTaskAsync(fileText.Text);
+            Byte[] data = null;
+            using (var stream = File.OpenRead(fileText.Text))
+            {
+                data = stream.ReadAsBytes();
+            }
+
+            var Result = await Bmob.FileUploadTaskAsync(new BmobLocalFile(data,"hello.png"));
             FinishedCallback(Result, resultText);
 
             bmobFile = Result;
@@ -77,5 +85,9 @@ namespace cn.bmob.example
 
         delegate void doUiThread();
 
+        private void BmobFileUploadForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

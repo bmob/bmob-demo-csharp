@@ -13,7 +13,7 @@
 
 # Bmob官方信息
 
-官方网址：[http://www.bmob.cn](http://www.bmob.cn)
+官方网址：[http://www.bmobapp.com](http://www.bmobapp.com)
 
 问答社区：[http://wenda.bmob.cn](http://wenda.bmob.cn)
 

@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Name = "BmobBaseForm";
-            this.Text = "Bmob后端云服务平台（www.bmob.cn）";
+            this.Text = "Bmob后端云服务平台（www.bmobapp.com）";
             this.ResumeLayout(false);
 
         }
